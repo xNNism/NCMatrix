@@ -1,11 +1,11 @@
-bin_PROGRAMS = cmatrix
-cmatrix_SOURCES = cmatrix.c
+bin_PROGRAMS = ncmatrix
+ncmatrix_SOURCES = ncmatrix.c
 
-man_MANS = cmatrix.1
+man_MANS = ncmatrix.1
 
 EXTRA_DIST =	AUTHORS COPYING ChangeLog INSTALL NEWS README \
 		TODO install-sh missing mkinstalldirs matrix.fnt \
-		matrix.psf.gz mtx.pcf cmatrix.1 cmatrix.spec
+		matrix.psf.gz mtx.pcf ncmatrix.1 ncmatrix.spec
 
 install-data-local:
 	@if test -d /usr/share/consolefonts; then \
@@ -24,7 +24,7 @@ install-data-local:
 	    $(INSTALL_DATA) $(srcdir)/mtx.pcf /usr/lib/X11/fonts/misc; \
 	    echo " Running mkfontdir /usr/lib/X11/fonts/misc..."; \
 	    $(MKFONTDIR) /usr/lib/X11/fonts/misc; \
-	    echo " Done.  If this is the first time you have installed CMatrix you will"; \
+	    echo " Done.  If this is the first time you have installed NCMatrix you will"; \
 	    echo " probably have to restart X window in order to use the mtx.pcf font."; \
 	else \
 	if test -d /usr/X11R6/lib/X11/fonts/misc; then \
@@ -33,7 +33,7 @@ install-data-local:
 	    $(INSTALL_DATA) $(srcdir)/mtx.pcf /usr/X11R6/lib/X11/fonts/misc; \
 	    echo " Running mkfontdir /usr/X11R6/lib/X11/fonts/misc..."; \
 	    $(MKFONTDIR) /usr/X11R6/lib/X11/fonts/misc; \
-	    echo " Done.  If this is the first time you have installed CMatrix you will"; \
+	    echo " Done.  If this is the first time you have installed NCMatrix you will"; \
 	    echo " probably have to restart X window in order to use the mtx.pcf font."; \
 	fi \
 	fi
