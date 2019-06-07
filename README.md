@@ -1,3 +1,21 @@
+## Building and installing cmatrix
+To install cmatrix, use either of the following methods from within the cmatrix directory.
+
+#### Using `configure` (recommended for most linux user)
+```
+autoreconf -i  # skip if using released tarball
+./configure
+make
+make install
+```
+### Running cmatrix
+After you have installed cmatrix just run `ncmatrix` to run ncmatrix :)
+
+
+example Usage: `ncmatrix -b -C white -I lo -R red -T yellow`
+
+
+```
 NCMatrix - a popular scrolling screensaver with network traffic display
 ------------------------------------------------------------------------------
 NCMatrix is based on the original CMatrix scrolling "screen saver"
@@ -104,3 +122,5 @@ Thanks to:
 
 This software is provided under the GNU GPL.  I am in no way affiliated
 in any way with the movie 'The Matrix', just a big fan.
+
+```
